@@ -17,6 +17,7 @@
 -(instancetype)initWithFrame:(CGRect)frame{
     if (self = [super initWithFrame:frame]) {
         _showLable = [UILabel new];
+        _showLable.text = @"this is  a test ";
         [self addSubview:_showLable];
     }
     return self;
