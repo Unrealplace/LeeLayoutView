@@ -8,9 +8,16 @@
 
 #import "LeeShowView.h"
 
+@interface LeeShowView()
+@property (nonatomic, strong) UILabel  * showLable;
+
+@end
+
 @implementation LeeShowView
 -(instancetype)initWithFrame:(CGRect)frame{
     if (self = [super initWithFrame:frame]) {
+        _showLable = [UILabel new];
+        [self addSubview:_showLable];
     }
     return self;
 }
