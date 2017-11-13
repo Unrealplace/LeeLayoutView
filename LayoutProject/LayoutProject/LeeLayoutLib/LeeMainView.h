@@ -8,6 +8,8 @@
 
 #import <UIKit/UIKit.h>
 
-@interface LeeMainView : UIView
-
+@interface LeeMainView : UIView{
+ @private
+    UIButton * popBtn;
+}
 @end

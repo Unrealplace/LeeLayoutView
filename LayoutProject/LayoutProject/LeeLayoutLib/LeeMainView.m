@@ -10,12 +10,27 @@
 
 @implementation LeeMainView
 
-/*
-// Only override drawRect: if you perform custom drawing.
-// An empty implementation adversely affects performance during animation.
-- (void)drawRect:(CGRect)rect {
-    // Drawing code
+-(instancetype)initWithFrame:(CGRect)frame{
+    if (self = [super initWithFrame:frame]) {
+        UIButton * button = [UIButton buttonWithType:UIButtonTypeCustom];
+        button.frame = CGRectMake(0, 0, self.frame.size.width, 30);
+        [button setImage:nil forState:UIControlStateNormal];
+        [button setBackgroundImage:nil forState:UIControlStateNormal];
+        [button setTitleColor:[UIColor redColor] forState:UIControlStateNormal];
+        [button setTitle:@"click" forState:UIControlStateNormal];
+        button.titleLabel.font          = nil;
+        button.backgroundColor    = nil;
+        button.layer.cornerRadius   = 3;
+        button.layer.masksToBounds = YES;
+        button.layer.borderWidth = 0;
+        button.layer.borderColor  = nil;
+        [button addTarget:self action:@selector(btnClick:) forControlEvents:UIControlEventTouchUpInside];
+        [self addSubview:button];
+        popBtn = button;
+    }
+    return self;
 }
-*/
-
+-(void)btnClick:(UIButton*)btn{
+    
+}
 @end
